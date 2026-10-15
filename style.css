@@ -1,0 +1,375 @@
+
+/* 1. General Settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080b09;
+    color: #ffffff;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* 2. Website Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 8%;
+    border-bottom: 1px solid #1c2920;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #39e879;
+}
+
+.header nav {
+    display: flex;
+    gap: 28px;
+}
+
+.header nav a {
+    color: #b8c5bc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.header nav a:hover {
+    color: #39e879;
+}
+
+/* 3. Main Container */
+.container {
+    width: 90%;
+    max-width: 850px;
+    margin: auto;
+}
+
+/* 4. Hero Section */
+.hero {
+    text-align: center;
+    padding: 65px 0 35px;
+}
+
+.tagline {
+    color: #39e879;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 6vw, 52px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #39e879;
+}
+
+.description {
+    color: #9daaa1;
+    max-width: 500px;
+    margin: auto;
+    font-size: 15px;
+}
+
+/* 5. Converter Card */
+.converter-card {
+    background: #111713;
+    border: 1px solid #26372b;
+    border-radius: 20px;
+    padding: 32px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+}
+
+.converter-card h2 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.card-description {
+    color: #9daaa1;
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+/* 6. Input Fields */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    flex: 1;
+    min-width: 0;
+}
+
+.input-group label {
+    color: #c9d4cc;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    min-width: 0;
+    padding: 15px 12px;
+    background: #080d09;
+    color: #ffffff;
+    border: 1px solid #2b3b30;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #39e879;
+    box-shadow: 0 0 0 2px rgba(57, 232, 121, 0.1);
+}
+
+/* 7. Currency Selection Row */
+.currency-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.swap-button {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    background: #1b3022;
+    color: #39e879;
+    border: 1px solid #31543b;
+    border-radius: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.swap-button:hover {
+    background: #39e879;
+    color: #080b09;
+    transform: rotate(180deg);
+}
+
+/* 8. Convert Button */
+.convert-button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 16px;
+    background: #39e879;
+    color: #071009;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.convert-button:hover {
+    background: #24cc64;
+    transform: translateY(-2px);
+}
+
+.convert-button:active {
+    transform: translateY(0);
+}
+
+/* 9. Conversion Result */
+.result-box {
+    margin-top: 25px;
+    padding: 22px;
+    background: #0a110c;
+    border: 1px solid #22392a;
+    border-radius: 12px;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.result-label {
+    color: #9daaa1;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.result-box h3 {
+    color: #39e879;
+    font-size: clamp(22px, 5vw, 32px);
+    margin-bottom: 8px;
+}
+
+#exchange-rate {
+    color: #c1ccc4;
+    font-size: 13px;
+}
+
+#status {
+    color: #839288;
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+/* 10. About Section */
+.about {
+    text-align: center;
+    padding: 55px 0;
+}
+
+.about h2 {
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+.about p {
+    color: #9daaa1;
+    font-size: 14px;
+}
+
+/* 11. Footer */
+.footer {
+    border-top: 1px solid #1c2920;
+    text-align: center;
+    padding: 25px 15px;
+    color: #839288;
+    font-size: 12px;
+}
+
+.footer a {
+    color: #39e879;
+    text-decoration: none;
+}
+
+/* 12. Mobile Responsiveness */
+@media (max-width: 600px) {
+    .header {
+        padding: 18px 5%;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .header nav {
+        gap: 14px;
+    }
+
+    .header nav a {
+        font-size: 13px;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+    .hero {
+        padding: 45px 0 28px;
+    }
+
+    .converter-card {
+        padding: 20px 15px;
+    }
+
+    .currency-row {
+        gap: 7px;
+    }
+
+    .input-group select {
+        padding: 13px 5px;
+        font-size: 11px;
+    }
+
+    .input-group input {
+        padding: 13px 10px;
+    }
+
+    .swap-button {
+        width: 36px;
+        height: 42px;
+        font-size: 21px;
+    }
+}
+
+
+/* Quick Currency Selection */
+.quick-currencies {
+    margin-top: 28px;
+}
+
+.quick-currencies > p {
+    color: #39e879;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+}
+
+.quick-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.quick-buttons button {
+    padding: 13px 8px;
+    background: #111713;
+    color: #dce7df;
+    border: 1px solid #26372b;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.quick-buttons button:hover {
+    border-color: #39e879;
+    background: #17251b;
+    color: #39e879;
+}
+
+/* Refresh Button */
+#refresh-button {
+    margin-top: 18px;
+    padding: 10px 16px;
+    background: transparent;
+    color: #39e879;
+    border: 1px solid #31543b;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+#refresh-button:hover {
+    background: #1b3022;
+}
+
+#refresh-button:disabled {
+    opacity: 0.5;
+    cursor: wait;
+}
+
+/* Mobile Layout */
+@media (max-width: 450px) {
+    .quick-buttons {
+        grid-template-columns: 1fr;
+    }
+}

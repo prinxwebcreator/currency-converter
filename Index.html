@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PRINX - Currency Converter</title>
+
+    <!-- Connect our CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Website Header -->
+    <header class="header">
+        <a href="#" class="logo">
+            Currency<span>X</span>
+        </a>
+
+        <nav>
+            <a href="#converter">Converter</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main class="container">
+
+        <section class="hero">
+            <p class="tagline">SMART CURRENCY EXCHANGE</p>
+
+            <h1>Convert currencies.<br>
+                <span>Cross boundaries.</span>
+            </h1>
+
+            <p class="description">
+                Convert money between different countries
+                using the latest available exchange rates.
+            </p>
+        </section>
+
+        <!-- Currency Converter -->
+        <section class="converter-card" id="converter">
+
+            <h2>Currency Converter</h2>
+
+            <p class="card-description">
+                Choose your currencies and enter an amount.
+            </p>
+
+            <form id="currency-form">
+
+                <!-- Amount Input -->
+                <div class="input-group">
+                    <label for="amount">Amount</label>
+
+                    <input
+                        type="number"
+                        id="amount"
+                        placeholder="Enter amount"
+                        min="0"
+                        step="any"
+                        value="1000"
+                        required
+                    >
+                </div>
+
+                <!-- Currency Selection -->
+                <div class="currency-row">
+
+                    <div class="input-group">
+                        <label for="from-currency">From</label>
+
+                        <select id="from-currency">
+                            <option value="NGN">NGN - Nigerian Naira</option>
+                            <option value="USD">USD - US Dollar</option>
+                            <option value="MXN">MXN - Mexican Peso</option>
+                            <option value="GBP">GBP - British Pound</option>
+                            <option value="EUR">EUR - Euro</option>
+                            <option value="CAD">CAD - Canadian Dollar</option>
+                            <option value="JPY">JPY - Japanese Yen</option>
+                            <option value="GHS">GHS - Ghanaian Cedi</option>
+                            <option value="ZAR">ZAR - South African Rand</option>
+                            <option value="INR">INR - Indian Rupee</option>
+                            <option value="MYR">MYR - Malaysian Ringgit</option>
+                        </select>
+                    </div>
+
+                    <button
+                        type="button"
+                        id="swap-button"
+                        class="swap-button"
+                        aria-label="Swap currencies"
+                        title="Swap currencies"
+                    >
+                        ⇄
+                    </button>
+
+                    <div class="input-group">
+                        <label for="to-currency">To</label>
+
+                        <select id="to-currency">
+                            <option value="USD">USD - US Dollar</option>
+                            <option value="NGN">NGN - Nigerian Naira</option>
+                            <option value="MXN">MXN - Mexican Peso</option>
+                            <option value="GBP">GBP - British Pound</option>
+                            <option value="EUR">EUR - Euro</option>
+                            <option value="CAD">CAD - Canadian Dollar</option>
+                            <option value="JPY">JPY - Japanese Yen</option>
+                            <option value="GHS">GHS - Ghanaian Cedi</option>
+                            <option value="ZAR">ZAR - South African Rand</option>
+                            <option value="INR">INR - Indian Rupee</option>
+                            <option value="MYR">MYR - Malaysian Ringgit</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <!-- Convert Button -->
+                <button type="submit" class="convert-button">
+                    Convert Currency →
+                </button>
+
+            </form>
+
+           
+<!-- Conversion Result -->
+<div class="result-box" aria-live="polite">
+
+    <p class="result-label">YOU WILL RECEIVE</p>
+
+    <h3 id="result">Your result will appear here</h3>
+
+    <p id="exchange-rate">
+        Exchange rate will appear here.
+    </p>
+
+    <p id="status" role="status">
+        Ready to convert.
+    </p>
+
+    <button type="button" id="refresh-button">
+        ↻ Refresh Exchange Rates
+    </button>
+
+</div>
+
+<!-- Quick Currency Selection -->
+<section class="quick-currencies">
+    <p>QUICK CONVERT</p>
+
+    <div class="quick-buttons">
+        <button type="button" data-from="USD" data-to="NGN">
+            🇺🇸 USD → 🇳🇬 NGN
+        </button>
+
+        <button type="button" data-from="NGN" data-to="USD">
+            🇳🇬 NGN → 🇺🇸 USD
+        </button>
+
+        <button type="button" data-from="USD" data-to="MXN">
+            🇺🇸 USD → 🇲🇽 MXN
+        </button>
+
+        <button type="button" data-from="EUR" data-to="GBP">
+            🇪🇺 EUR → 🇬🇧 GBP
+        </button>
+    </div>
+</section>
+
+
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <h2>Currency conversion made simple.</h2>
+
+            <p>
+                PRINX helps you compare currencies from
+                different countries in one simple interface.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>
+            © 2026 PRINX. Built with HTML, CSS & JavaScript.
+        </p>
+
+        <p>
+            Exchange rates provided by
+            <a href="https://www.exchangerate-api.com"
+               target="_blank"
+               rel="noopener noreferrer">
+                ExchangeRate-API
+            </a>
+        </p>
+    </footer>
+
+    <!-- Connect our JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>
